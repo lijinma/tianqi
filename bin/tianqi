@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+require('colorful').toxic();
+
+if (!process.argv[2]) {
+  console.log('tianqi ~ ' + require('../package').version.green);
+  console.log(require('../package').description.grey);
+  console.log('  $ '.cyan + 'tianqi 上海');
+  console.log('  $ '.cyan + 'tianqi 北京');
+  return;
+}
+
+
+var tianqi = require('..');
+tianqi(process.argv.slice(2).join(' '));
